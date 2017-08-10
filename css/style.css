@@ -590,6 +590,9 @@ p {
   border-bottom: 2px solid #36A213;
   margin-top: 30px;
   border-radius: 5px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 .butt span {
   font-size: 18px;
@@ -609,6 +612,8 @@ p {
 }
 .butt:hover {
   text-decoration: none;
+  background: #268FBD;
+  border-bottom: 2px solid #207CA9;
 }
 .online {
   border: 1px solid #D2DAE1;
