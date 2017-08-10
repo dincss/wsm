@@ -1072,6 +1072,22 @@ p {
     -ms-flex-preferred-size: 460px;
     flex-basis: 460px;
   }
+  .converter .give {
+    width: 90%;
+  }
+  .converter .give input {
+    max-width: 355px;
+    width: 100%;
+  }
+  .select_box,
+  .dropped {
+    right: 3px;
+  }
+  .form_bl {
+    -webkit-flex-basis: 270px;
+    -ms-flex-preferred-size: 270px;
+    flex-basis: 270px;
+  }
 }
 @media (min-width: 1100px) and (max-width: 1200px) {
   .contact_block {
@@ -1079,5 +1095,13 @@ p {
   }
   .main_menu li a {
     font-size: 14px;
+  }
+  .form_bl {
+    -webkit-flex-basis: 330px;
+    -ms-flex-preferred-size: 330px;
+    flex-basis: 330px;
+  }
+  .select_box {
+    right: 20px;
   }
 }
