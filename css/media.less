@@ -105,6 +105,8 @@
   }
   .equal_wrapper {
     flex-direction: column;
+    position: relative;
+    z-index: 0;
   }
   .converter .give select {
     width: 65px;
@@ -115,8 +117,9 @@
     width: 100%;
   }
   .converter .give {
-    position: relative;
+    // position: relative;
     width: 100%;
+    // z-index: 0;
   }
   .converter .give .sel {
     position: absolute !important;
@@ -147,7 +150,12 @@
   .butt {
     margin-top: 0;
   }
-
+  .select_box {
+    right: 2px;
+  }
+  .dropped {
+    right: 2px;
+  }
 
 
 }

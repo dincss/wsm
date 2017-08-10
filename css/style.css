@@ -368,20 +368,24 @@ p {
   padding: 15px 25px 30px 25px;
 }
 .converter .give {
+  width: 100%;
+  position: relative;
   font-size: 18px;
   color: #4C5867;
   font-weight: 400;
 }
 .converter .give input {
-  max-width: 200px;
-  width: 100%;
+  max-width: 315px;
+  width: 150%;
   height: 50px;
   border: 2px solid #B1B7C9;
-  border-right: 1px solid #ECECEC;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  border-radius: 4px;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
+  z-index: 1;
 }
 .converter .give input::-moz-placeholder {
   font-family: "Roboto";
@@ -430,7 +434,15 @@ p {
   background-position-y: 50%;
   padding-left: 45px;
   position: relative;
-  left: -4px;
+  left: -6px;
+  top: -1px;
+}
+.converter .give select option {
+  color: #586370;
+  background: #fff;
+  border: 1px solid #B1B7C9;
+  height: 30px;
+  padding-left: 25px;
 }
 .converter .give.rub .sel {
   position: relative;
@@ -448,6 +460,86 @@ p {
 }
 .converter .give.mb {
   margin-bottom: 15px;
+}
+.select_box {
+  position: absolute;
+  border-left: 1px solid #ECECEC;
+  background: #fff;
+  height: 43px;
+  width: 114px;
+  right: 27px;
+  top: 28px;
+  cursor: pointer;
+  z-index: 1;
+}
+.select_box .curr {
+  font-weight: 500;
+  font-size: 18px;
+  color: #4C5867;
+  position: relative;
+  right: -50px;
+  top: 9px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.select_box .curr:after {
+  content: "";
+  background: url('../img/select_arrow.png') no-repeat center center;
+  display: block;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  right: -28px;
+  top: -2px;
+  z-index: 2;
+}
+.select_box .curr:before {
+  content: "";
+  background: url('../img/pm.png') no-repeat center center;
+  display: block;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  left: -40px;
+  top: -5px;
+  z-index: 2;
+}
+.select_box .curr.rub:before {
+  content: "";
+  background: url('../img/a.png') no-repeat center center;
+  display: block;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  left: -40px;
+  top: -5px;
+  z-index: 2;
+}
+.dropped {
+  width: 114px;
+  height: 0px;
+  background: #fff;
+  position: absolute;
+  right: 27px;
+  z-index: 200;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.dropped li {
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #B1B7C9;
+}
+.dropped.js {
+  height: 52px;
+  border: 1px solid #B1B7C9;
+  border-top: none;
 }
 .equal_wrapper {
   display: -webkit-box;
@@ -824,6 +916,8 @@ p {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
+    z-index: 0;
   }
   .converter .give select {
     width: 65px;
@@ -834,7 +928,6 @@ p {
     width: 100%;
   }
   .converter .give {
-    position: relative;
     width: 100%;
   }
   .converter .give .sel {
@@ -869,6 +962,12 @@ p {
   }
   .butt {
     margin-top: 0;
+  }
+  .select_box {
+    right: 2px;
+  }
+  .dropped {
+    right: 2px;
   }
 }
 @media (min-width: 768px) and (max-width: 990px) {

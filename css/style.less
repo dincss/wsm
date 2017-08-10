@@ -395,19 +395,26 @@ p {
   border-radius: 5px;
   padding: 15px 25px 30px 25px;
   .give {
+    width: 100%;
+    position: relative;
     font-size: 18px;
     color: #4C5867;
     font-weight: 400;
     input {
-      max-width: 200px;
-      width: 100%;
+      max-width: 315px;
+      // max-width: 200px;
+      width: 150%;
+      // width: 100%;
       height: 50px;
       border: 2px solid #B1B7C9;
-      border-right: 1px solid #ECECEC;
+      // border-right: 1px solid #ECECEC;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
+      border-radius: 4px;
       padding-left: 10px;
       padding-right: 10px;
+      position: relative;
+      z-index: 1;
       &::-moz-placeholder {
         font-family: "Roboto";
         font-weight: 400;
@@ -439,7 +446,6 @@ p {
         right: 80px;
         top: -5px;
         z-index: 2;
-
       }
     }
     select {
@@ -456,7 +462,15 @@ p {
       background-position-y: 50%;
       padding-left: 45px;
       position: relative;
-      left: -4px;
+      left: -6px;
+      top: -1px;
+      option{
+        color: #586370;
+        background:#fff;
+        border: 1px solid #B1B7C9;
+        height: 30px;
+        padding-left: 25px;
+      }
     }
     &.rub {
       .sel {
@@ -471,7 +485,6 @@ p {
           right: 80px;
           top: -5px;
           z-index: 2;
-
         }
       }
     }
@@ -480,6 +493,88 @@ p {
     }
   }
 }
+
+.select_box {
+  position: absolute;
+  border-left: 1px solid #ECECEC;
+  background: #fff;
+  height: 43px;
+  width: 114px;
+  right: 27px;
+  top: 28px;
+  cursor: pointer;
+  z-index: 1;
+  .curr {
+    font-weight: 500;
+    font-size: 18px;
+    color: #4C5867;
+    position: relative;
+    right: -50px;
+    top: 9px;
+    z-index: 1;
+    user-select: none;
+    &:after {
+      content: "";
+      background: url('../img/select_arrow.png') no-repeat center center;
+      display: block;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      right: -28px;
+      top: -2px;
+      z-index: 2;
+    }
+    &:before {
+      content: "";
+      background: url('../img/pm.png') no-repeat center center;
+      display: block;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: -40px;
+      top: -5px;
+      z-index: 2;
+    }
+    &.rub {
+      &:before {
+        content: "";
+        background: url('../img/a.png') no-repeat center center;
+        display: block;
+        width: 31px;
+        height: 31px;
+        position: absolute;
+        left: -40px;
+        top: -5px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.dropped {
+  width: 114px;
+  height: 0px;
+  background: #fff;
+  position: absolute;
+  right: 27px;
+  z-index: 200;
+  overflow: hidden;
+  transition: all .3s;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid #B1B7C9;
+  }
+  &.js {
+    height: 52px;
+    border: 1px solid #B1B7C9;
+    border-top: none;
+  }
+}
+
+
 
 
 .equal_wrapper {
